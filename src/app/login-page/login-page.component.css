@@ -2,7 +2,7 @@
 @media only screen and (max-width: 767px){
     .home{
         padding: 6% 0;
-        background-color: #000000;
+        background-image: url("src\assets\images\wall2.jpg");
         width: 100%;
     }
     .logo{
@@ -10,7 +10,7 @@
     }
     .container{
         box-shadow: inset 0px 6px 5px 7px #80808082;
-        background-color: white;
+        background-color: #ffffffba;
     }
     .fieldBox{
         padding-top: 2%;
@@ -29,7 +29,7 @@
     
     .home{
         padding: 6% 0;
-        background-color: #000000;
+        background-image: url("src\assets\images\wall2.jpg");
         width: 100%;
     }
     .logo{
@@ -37,7 +37,7 @@
     }
     .container{
         box-shadow: inset 0px 6px 5px 7px #80808082;
-        background-color: white;
+        background-color: #ffffffba;
         width: 66%;
         height: 68%;
     }
