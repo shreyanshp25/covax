@@ -1,0 +1,38 @@
+.home{
+    background-image: url("src\assets\images\wall2.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    position: relative;
+    opacity: 0.67;
+}
+.bt1{
+    position: absolute;
+    top: 60%;
+    left: 6%;
+    width: 15%;
+    padding: 10px;
+    color: black;
+    background-color: transparent;
+    font-weight: 700;
+    border-radius: 40px;
+    border: 1px solid;
+}
+.bt2{
+    position: absolute;
+    top: 60%;
+    left: 22%;
+    width: 15%;
+    padding: 10px;
+    color: black;
+    background-color: transparent;
+    font-weight: 700;
+    border-radius: 40px;
+    border: 1px solid;
+}
+.btn:hover{
+    transform: scale(1.1);
+    background-color: #6fa6b79c;
+    transition: 0.5s ease;
+}
