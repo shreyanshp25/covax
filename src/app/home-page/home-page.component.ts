@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { MapViewComponent } from '../map-view/map-view.component';
 
 @Component({
   selector: 'app-home-page',
@@ -7,8 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
+  openDialog(){
+    this.dialog.open(MapViewComponent)
+  }
   ngOnInit(): void {
   }
 

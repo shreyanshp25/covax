@@ -9,6 +9,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { MapViewComponent } from './map-view/map-view.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,19 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     HeaderComponent,
     HomePageComponent,
     LoginPageComponent,
-    SignUpComponent
+    SignUpComponent,
+    MapViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    AgmCoreModule.forRoot(
+      {
+        apiKey: 'AIzaSyDxTiSuqq1Ne9zBFpQJveItwVKXmyrfqsg'
+      }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

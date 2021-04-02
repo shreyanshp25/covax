@@ -36,3 +36,42 @@
     background-color: #6fa6b79c;
     transition: 0.5s ease;
 }
+@media only screen and (max-width: 735px){
+    .heading{
+        font-size: 80px;
+        color: black;
+        margin: auto;
+        position: absolute;
+        top: 36%;
+        left: 19%;
+    }
+    .bt1{
+        width: 44%;
+    }
+    .bt2{
+        width: 44%;
+        left: 52%;
+    }
+}
+
+@media only screen and (min-width: 736px){
+    .heading{
+        font-size: 96px;
+        color: black;
+        margin: auto;
+        position: absolute;
+        top: 35%;
+        left: 30%;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .heading{
+        font-size: 104px;
+        color: black;
+        margin: auto;
+        position: absolute;
+        top: 35%;
+        left: 33%;
+    }
+}
