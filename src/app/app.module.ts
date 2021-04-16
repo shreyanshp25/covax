@@ -11,6 +11,7 @@ import { MaterialModule } from './material/material.module';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { MapViewComponent } from './map-view/map-view.component';
 import { AgmCoreModule } from '@agm/core';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AgmCoreModule } from '@agm/core';
     HomePageComponent,
     LoginPageComponent,
     SignUpComponent,
-    MapViewComponent
+    MapViewComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
