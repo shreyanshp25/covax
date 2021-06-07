@@ -1,28 +1,39 @@
-<h2 class="text-center">Sign Up</h2>
-<div class="container">
-  <p>
-    <mat-form-field appearance="outline">
-      <mat-label>Name</mat-label>
-      <input matInput placeholder="">
-    </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field appearance="outline">
-      <mat-label>Email</mat-label>
-      <input matInput placeholder="">
-    </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field appearance="outline">
-      <mat-label>Password</mat-label>
-      <input matInput placeholder="">
-    </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field appearance="outline">
-      <mat-label>Confirm Password</mat-label>
-      <input matInput placeholder="">
-    </mat-form-field>
-  </p>
-  <button type="button" class="btn btn-primary">Submit</button>
-</div>
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+  <h2 class="text-center">Sign Up</h2>
+  <div class="container">
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input formControlName="name" matInput placeholder="">
+        <mat-error *ngIf="(myForm.controls?.name?.touched) && myForm.controls?.name?.errors?.required">Name is required</mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input formControlName="email" matInput placeholder="">
+        <mat-error *ngIf="myForm.controls?.email?.touched && myForm.controls?.email?.errors?.required">Email is required</mat-error>
+        <mat-error *ngIf="myForm.controls?.email?.touched && myForm.controls?.email?.errors?.email">Enter a valid email</mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input type="password" formControlName="Password" matInput placeholder="">
+        <mat-error *ngIf="myForm.controls?.Password?.touched && myForm.controls?.Password?.errors?.required">Password is required</mat-error>
+        <mat-error *ngIf="myForm.controls?.Password?.touched && myForm.controls?.Password?.errors?.pattern">Password should have atleast 3 alphanumeric characters and atleast 1 special character</mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Confirm Password</mat-label>
+        <input type="password" formControlName="ConfirmPassword" matInput placeholder="">
+        <mat-error *ngIf="myForm.controls?.ConfirmPassword?.touched && myForm.controls?.ConfirmPassword?.errors?.required">Confirm Password is required</mat-error>
+        <mat-error *ngIf="myForm.controls?.ConfirmPassword?.touched && errorValidation(myForm)">Confirm Password should be same as Password</mat-error>
+        
+      </mat-form-field>
+    </p>
+    <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid">Submit</button>
+  </div>
+
+</form>

@@ -6,6 +6,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
+import {  ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -20,7 +21,8 @@ import {MatListModule} from '@angular/material/list';
     MatDialogModule,
     MatTabsModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    ReactiveFormsModule,
   ]
 })
 export class MaterialModule { }
